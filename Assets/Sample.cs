@@ -11,13 +11,14 @@ public class A
 }
 
 public class Sample : MonoBehaviour
-{
-	[Separator(1)] public string separator;
-	[Label("ColorTest")] public string label;
+{	
+	[Separator(15)] public string separator;
+	[TitleLabel("ColorTest",15)] public string label;
 	[Color(0xff0000)] public int _int;
 	[Color(0f,1f,0f)] public float _float;
 	[Color(0,0,255)] public string _string;
-	[Label("Disable",true)] public string label2;
+	[Separator] public string separator2;
+	[TitleLabel("Disable",15,0x4444FF)] public string label2;
 	[Disable] [SerializeField] string DisableTest = "HELLO WORLD";
 
 	[Indent(5)] public int indent5;

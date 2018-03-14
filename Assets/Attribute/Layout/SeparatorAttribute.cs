@@ -4,11 +4,14 @@ using System.Reflection;
 
 namespace Yosh
 {
-	[AttributeUsage(AttributeTargets.Field, AllowMultiple = false, Inherited = false)]
+	/// <summary>
+	/// インスペクター区切り線を表示する
+	/// </summary>
+	[AttributeUsage(AttributeTargets.Field, AllowMultiple = true, Inherited = true)]
 	public class SeparatorAttribute : PropertyAttribute
 	{
 		public float Height { get; private set; }
-
+		
 		public SeparatorAttribute(float height = 1)
 		{
 			Height = height;

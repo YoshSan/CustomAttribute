@@ -10,10 +10,18 @@ namespace Yosh.Editor
 		{
 			var inst = attribute as SeparatorAttribute;
 			var rect = position;
-			rect.y += 5;
-			rect.height = inst.Height;
-			rect.width -= 10;
+			rect.y += inst.Height / 2;
+			rect.height = 1;
+			rect.width += 5;
+
+			EditorGUI.indentLevel--;
 			EditorGUI.LabelField(rect, "", GUI.skin.box);
+		}
+
+		public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+		{
+			var inst = attribute as SeparatorAttribute;
+			return /*base.GetPropertyHeight(property, label)*/ + inst.Height;
 		}
 	}
 }

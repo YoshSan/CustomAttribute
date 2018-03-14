@@ -4,17 +4,23 @@ using System.Reflection;
 
 namespace Yosh
 {
-	[AttributeUsage(AttributeTargets.Field, AllowMultiple = false, Inherited = false)]
-	public class LabelAttribute : PropertyAttribute
+	/// <summary>
+	/// 見出し表示用Attribute
+	/// </summary>
+	[AttributeUsage(AttributeTargets.Field, AllowMultiple = true, Inherited = true)]
+	public class TitleLabelAttribute : PropertyAttribute
 	{
 		public string Label { get; private set; }
 
-		public bool IsDropShadow { get; private set; }
+		public int FontSize { get; private set; }
 
-		public LabelAttribute(string label, bool isDropShadow = false)
+		public uint Color { get; private set; }
+		
+		public TitleLabelAttribute( string label ,int fontSize = 133, uint color = 0x131313)
 		{
 			Label = label;
-			IsDropShadow = isDropShadow;
+			FontSize = fontSize;
+			Color = color;
 		}
 	}
 }

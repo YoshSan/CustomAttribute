@@ -4,6 +4,9 @@ using System.Reflection;
 
 namespace Yosh
 {
+	/// <summary>
+	/// インスペクターに表示するプロパティにインデントを付与する
+	/// </summary>
 	[AttributeUsage(AttributeTargets.Field, AllowMultiple = false, Inherited = false)]
 	public class IndentAttribute : PropertyAttribute
 	{

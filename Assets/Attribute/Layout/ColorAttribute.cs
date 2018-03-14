@@ -3,6 +3,9 @@ using System;
 
 namespace Yosh
 {
+	/// <summary>
+	/// インスペクターに表示するプロパティの色を変更する
+	/// </summary>
 	[AttributeUsage(AttributeTargets.Field | AttributeTargets.Struct, AllowMultiple = false, Inherited = false)]
 	public class ColorAttribute : PropertyAttribute
 	{
