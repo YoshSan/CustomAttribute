@@ -21,7 +21,7 @@ public class Sample : MonoBehaviour
 	[TitleLabel("Disable",15,0x4444FF)] public string label2;
 	[Disable] [SerializeField] string DisableTest = "HELLO WORLD";
 
-	[Indent(5)] public int indent5;
+	[Memo("AAAAAAAAAAAAAAAAAAAAAAAAASDASDASDAAAAAAA\nBBBBB\nCCC\nCC")] public int memo = 9;
 
 	// Use this for initialization
 	void Start()
